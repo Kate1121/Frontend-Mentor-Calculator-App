@@ -1,0 +1,24 @@
+:root {
+    --color-theme1-background-blue: hsl(222, 26%, 31%);
+    --color-theme1-keypad-background-blue: hsl(223, 31%, 20%);
+    --color-theme1-screen-background-blue: hsl(224, 36%, 15%);
+    --color-theme1-key-background-blue: hsl(225, 21%, 49%);
+    --color-theme1-key-shadow-background-blue: hsl(224, 28%, 35%);
+    --color-theme1-key-background-red: hsl(6, 63%, 50%);
+    --color-theme1-key-shadow-background-red: hsl(6, 70%, 34%);
+    --color-theme1-key-background-orange: hsl(30, 25%, 89%);
+    --color-theme1-key-shadow-background-orange: hsl(28, 16%, 65%);
+    --color-theme1-text-blue: hsl(221, 14%, 31%);
+    --color-theme1-text-white: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0rem;
+    margin: 0rem;
+}
+
+body {
+    background-color: var(--color-theme1-background-blue);
+    color: var(--color-theme1-text-white);
+
+}
