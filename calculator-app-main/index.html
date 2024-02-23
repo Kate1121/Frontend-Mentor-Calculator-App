@@ -27,6 +27,7 @@
     .attribution {
       font-size: 11px;
       text-align: center;
+      color: hsl(0, 0%, 100%);
     }
 
     .attribution a {
@@ -37,10 +38,86 @@
 
 <body>
   <header>
-
+    <h1>Calculator App</h1>
   </header>
   <main>
-
+    <article>
+      <section>
+        <div class="theme-settings-container">
+          <datalist id="themes">
+            <option value="1" label="1">1</option>
+            <option value="2" label="2">2</option>
+            <option value="3" label="3">3</option>
+          </datalist>
+          <input type="range" min="1" max="3" list="themes" name="theme" id="theme-slider">
+          <h1 id="calc">calc</h1>
+          <h3 id="theme-label">Theme</h3>
+        </div>
+      </section>
+      <section>
+        <form>
+          <input type="number" id="form" minlength="1">
+        </form>
+      </section>
+      <section>
+        <div class="keypad">
+          <div class="button">
+            <button id="seven" value="7">7</button>
+          </div>
+          <div class="button">
+            <button id="eight" value="8">8</button>
+          </div>
+          <div class="button">
+            <button id="nine" value="9">9</button>
+          </div>
+          <div class="button">
+            <button id="del">DEL</button>
+          </div>
+          <div class="button">
+            <button id="four" value="4">4</button>
+          </div>
+          <div class="button">
+            <button id="five" value="5">5</button>
+          </div>
+          <div class="button">
+            <button id="six" value="6">6</button>
+          </div>
+          <div class="button">
+            <button id="plus">+</button>
+          </div>
+          <div class="button">
+            <button id="one" value="1">1</button>
+          </div>
+          <div class="button">
+            <button id="two" value="2">2</button>
+          </div>
+          <div class="button">
+            <button id="three" value="3">3</button>
+          </div>
+          <div class="button">
+            <button id="minus">-</button>
+          </div>
+          <div class="button">
+            <button id="period">.</button>
+          </div>
+          <div class="button">
+            <button id="zero" value="0">0</button>
+          </div>
+          <div class="button">
+            <button id="divide">/</button>
+          </div>
+          <div class="button">
+            <button id="multiply">x</button>
+          </div>
+          <div class="button">
+            <button id="reset">Reset</button>
+          </div>
+          <div class="button">
+            <button id="seven">=</button>
+          </div>
+        </div>
+      </section>
+    </article>
   </main>
   <footer>
     <div class="attribution">
