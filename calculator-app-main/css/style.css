@@ -1,3 +1,6 @@
+/* Added CSS rules for the dark color theme (utilized if user prefers dark mode) */
+
+/* Style the root element when its class is set to "dark" */
 :root.dark {
     --color-theme-background: hsl(222, 26%, 31%);
     --color-theme-keypad-background: hsl(223, 31%, 20%);
@@ -33,6 +36,7 @@ header h1 {
     animation: zoom 1s;
 }
 
+/* Zoom out animation */
 @keyframes zoom {
     from {
         font-size: 0vw;
@@ -71,6 +75,7 @@ datalist {
 }
 
 option {
+    /* Rotate the label on the option elements so that they appear upright */
     transform: rotate(270deg);
 }
 
@@ -100,6 +105,7 @@ datalist + input {
     cursor: pointer;
 }
 
+/* The ::-webkit-slider-thumb pseudo-element styles the thumb of the range */
 datalist + input::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: 1rem;
@@ -187,6 +193,9 @@ button:hover {
     opacity: 90%;
 }
 
+/* Added CSS rules for the purple color theme (utilized if user prefers dark mode) */
+
+/* Style the root element when its class is set to "purple" */
 :root.purple {
     --color-theme-background: hsl(268, 75%, 9%);
     --color-theme-keypad-screen-background: hsl(268, 71%, 12%);
@@ -201,6 +210,7 @@ button:hover {
     --color-theme-text-3: hsl(52, 100%, 62%);
 }
 
+/* Style various elements when the class of the root element is set to "purple" */
 :root.purple h1, 
 :root.purple datalist, 
 :root.purple #numbers,
@@ -234,6 +244,7 @@ button:hover {
 
 @media (prefers-color-scheme: light) {
 
+    /* Added CSS rules for the light color theme (utilized if user prefers light mode) */
     :root {
         --color-theme-background: hsl(0, 0%, 90%);
         --color-theme-keypad-background: hsl(0, 5%, 81%);
@@ -248,6 +259,81 @@ button:hover {
         --color-theme-text-2: hsl(60, 10%, 19%);
     }
 
+    body {
+        background-color: var(--color-theme-background);
+        color: var(--color-theme-text-2);
+    }
+
+    header h1 {
+        color: var(--color-theme-text-2);
+    }
+
+    .theme-settings-container {
+        color: var(--color-theme-text-2);
+    }
+
+    datalist + input {
+        background-color: var(--color-theme-keypad-background);
+    }
+    
+    datalist + input::-webkit-slider-thumb {
+        background: var(--color-theme-key-background-2);
+    }
+
+    #numbers {
+        border: 0.3vw solid var(--color-theme-screen-background);
+        background-color: var(--color-theme-screen-background);
+        color: var(--color-theme-text-2);
+    }
+    
+    #numbers:focus {
+        border: 0.3vw solid var(--color-theme-text-2);
+    }
+    
+    .keypad {
+        background-color: var(--color-theme-keypad-background);
+    }
+    
+    button {
+        background-color: var(--color-theme-key-background-3);
+        color: var(--color-theme-text-2);
+        box-shadow: 0vw 0.3vw var(--color-theme-key-shadow-background-3);
+    }
+    
+    #del, #reset {
+        background-color: var(--color-theme-key-background-1);
+        box-shadow: 0vw 0.3vw var(--color-theme-key-shadow-background-1);
+    }
+
+    #equals {
+        background-color: var(--color-theme-key-background-2);
+        box-shadow: 0vw 0.3vw var(--color-theme-key-shadow-background-2);
+    }
+
+    footer > .attribution, footer > .attribution a {
+        color: var(--color-theme-text-2);
+    }
+
+    /* Added CSS rules for the dark color theme (utilized if user prefers light mode) */
+
+    :root.dark header h1 {
+        color: var(--color-theme-text-1);
+    }
+
+    :root.dark .theme-settings-container {
+        color: var(--color-theme-text-1);
+    }
+
+    :root.dark #numbers {
+        color: var(--color-theme-text-1);
+    }
+
+    :root.dark footer > .attribution,
+    :root.dark footer > .attribution a {
+        color: var(--color-theme-text-1);
+    }
+
+    /* Added CSS rules for the purple color theme (utilized if user prefers light mode) */
     :root.purple {
         --color-theme-background: hsl(268, 75%, 9%);
         --color-theme-keypad-screen-background: hsl(268, 71%, 12%);
@@ -291,82 +377,12 @@ button:hover {
         background-color: var(--color-theme-key-background-2);
         color: var(--color-theme-text-2);
     }
-
-    body {
-        background-color: var(--color-theme-background);
-        color: var(--color-theme-text-2);
-    }
-
-    header h1 {
-        color: var(--color-theme-text-2);
-    }
-
-    :root.dark header h1 {
-        color: var(--color-theme-text-1);
-    }
-
-    .theme-settings-container {
-        color: var(--color-theme-text-2);
-    }
-
-    :root.dark .theme-settings-container {
-        color: var(--color-theme-text-1);
-    }
-
-    datalist + input {
-        background-color: var(--color-theme-keypad-background);
-    }
-    
-    datalist + input::-webkit-slider-thumb {
-        background: var(--color-theme-key-background-2);
-    }
-
-    #numbers {
-        border: 0.3vw solid var(--color-theme-screen-background);
-        background-color: var(--color-theme-screen-background);
-        color: var(--color-theme-text-2);
-    }
-
-    :root.dark #numbers {
-        color: var(--color-theme-text-1);
-    }
-    
-    #numbers:focus {
-        border: 0.3vw solid var(--color-theme-text-2);
-    }
-    
-    .keypad {
-        background-color: var(--color-theme-keypad-background);
-    }
-    
-    button {
-        background-color: var(--color-theme-key-background-3);
-        color: var(--color-theme-text-2);
-        box-shadow: 0vw 0.3vw var(--color-theme-key-shadow-background-3);
-    }
-    
-    #del, #reset {
-        background-color: var(--color-theme-key-background-1);
-        box-shadow: 0vw 0.3vw var(--color-theme-key-shadow-background-1);
-    }
-
-    #equals {
-        background-color: var(--color-theme-key-background-2);
-        box-shadow: 0vw 0.3vw var(--color-theme-key-shadow-background-2);
-    }
-
-    footer > .attribution, footer > .attribution a {
-        color: var(--color-theme-text-2);
-    }
-
-    :root.dark footer > .attribution,
-    :root.dark footer > .attribution a {
-        color: var(--color-theme-text-1);
-    }
 }
 
+/* Added CSS rules for the light color theme (utilized if user prefers dark mode) */
 @media (prefers-color-scheme: dark) {
 
+    /* Style the root element when its class is set to "light" */
     :root.light {
         --color-theme-background: hsl(0, 0%, 90%);
         --color-theme-keypad-background: hsl(0, 5%, 81%);

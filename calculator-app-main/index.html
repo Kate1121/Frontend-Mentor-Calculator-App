@@ -45,43 +45,44 @@
   </header>
   <main>
     <article>
-      <section>
+      <section> <!-- Select Theme Section -->
         <div class="theme-settings-container">
           <datalist id="themes">
             <option value="1" label="1">1</option>
             <option value="2" label="2">2</option>
             <option value="3" label="3">3</option>
           </datalist>
-          <input type="range" min="1" max="3" list="themes" name="theme" id="themes-slider">
+          <input type="range" min="1" max="3" list="themes" name="theme" id="themes-slider"
+            onclick="change_theme_color()">
           <h1 id="calc">calc</h1>
           <h1 id="theme-label">Theme</h1>
         </div>
       </section>
-      <section>
+      <section> <!-- Number Input -->
         <form id="form">
-          <input type="number" id="numbers">
+          <input type="number" id="numbers" step="0.00001">
         </form>
       </section>
-      <section>
+      <section> <!-- Calculator Buttons -->
         <div class="keypad">
-          <button id="seven" value="7">7</button>
-          <button id="eight" value="8">8</button>
-          <button id="nine" value="9">9</button>
-          <button id="del">DEL</button>
-          <button id="four" value="4">4</button>
-          <button id="five" value="5">5</button>
-          <button id="six" value="6">6</button>
-          <button id="plus">+</button>
-          <button id="one" value="1">1</button>
-          <button id="two" value="2">2</button>
-          <button id="three" value="3">3</button>
-          <button id="minus">-</button>
-          <button id="period">.</button>
-          <button id="zero" value="0">0</button>
-          <button id="divide">/</button>
-          <button id="multiply">x</button>
-          <button id="reset">Reset</button>
-          <button id="equals">=</button>
+          <button id="seven" value="7" onclick="add_number_to_form_input()">7</button>
+          <button id="eight" value="8" onclick="add_number_to_form_input()">8</button>
+          <button id="nine" value="9" onclick="add_number_to_form_input()">9</button>
+          <button id="del" onclick="del()">DEL</button>
+          <button id="four" value="4" onclick="add_number_to_form_input()">4</button>
+          <button id="five" value="5" onclick="add_number_to_form_input()">5</button>
+          <button id="six" value="6" onclick="add_number_to_form_input()">6</button>
+          <button id="plus" onclick="decide_mathematical_operation()">+</button>
+          <button id="one" value="1" onclick="add_number_to_form_input()">1</button>
+          <button id="two" value="2" onclick="add_number_to_form_input()">2</button>
+          <button id="three" value="3" onclick="add_number_to_form_input()">3</button>
+          <button id="minus" onclick="decide_mathematical_operation()">-</button>
+          <button id="period" value="." onclick="add_number_to_form_input()">.</button>
+          <button id="zero" value="0" onclick="add_number_to_form_input()">0</button>
+          <button id="divide" onclick="decide_mathematical_operation()">/</button>
+          <button id="multiply" onclick="decide_mathematical_operation()">x</button>
+          <button id="reset" onclick="reset()">Reset</button>
+          <button id="equals" onclick="calc()">=</button>
         </div>
       </section>
     </article>
@@ -89,9 +90,10 @@
   <footer>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://github.com/Kate1121">Kaitlyn Francis</a>.
     </div>
   </footer>
 </body>
+<script src="js/script.js"></script>
 
 </html>
